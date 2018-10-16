@@ -1,9 +1,10 @@
-from mock import patch
+import mock
+from jobs.{{cookiecutter.job_name}} import analyze
 from pysparkling import Context
-from jobs.wordcount import analyze
 
-@patch('jobs.wordcount.WordCountJobContext.initalize_counter')
-@patch('jobs.wordcount.WordCountJobContext.inc_counter')
+
+@mock.patch('jobs.{{cookiecutter.job_name}}.WordCountJobContext.initalize_counter')
+@mock.patch('jobs.{{cookiecutter.job_name}}.WordCountJobContext.inc_counter')
 def test_wordcount_analyze(_, __):
     result = analyze(Context())
     assert len(result) == 327

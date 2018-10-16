@@ -1,5 +1,6 @@
-from mock import MagicMock
 from jobs.wordcount import to_pairs
+from mock import MagicMock
+
 
 def test_to_pairs():
     context = MagicMock()
