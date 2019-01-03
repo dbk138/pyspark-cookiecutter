@@ -1,4 +1,4 @@
-from jobs.wordcount import to_pairs
+from jobs.{{ cookiecutter.job_name }} import to_pairs
 from mock import MagicMock
 
 
